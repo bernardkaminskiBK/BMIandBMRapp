@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BMI and BMR app</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="welcome_headline">What is your BMI and BMR?</string>
+    <string name="provide_data">Provide your data</string>
+    <string name="btnTextStart">Let\'s start</string>
+    <string name="btnTextCalculate">Calculate</string>
+    <string name="desc_calc">Calculator image</string>
+    <string name="background_desc">background color image</string>
+    <string name="text_view_age">Age</string>
+    <string name="text_view_height">Height</string>
+    <string name="text_view_weight">Weight</string>
+    <string name="Man_text_radio_btn">Man</string>
+    <string name="Woman_text_radio_btn">Woman</string>
+    <string name="bmi_result_text">Your BMI is</string>
+    <string name="bmr_result_text">Your BMR is</string>
+    <string name="weight_category_result_text">Result</string>
+</resources>

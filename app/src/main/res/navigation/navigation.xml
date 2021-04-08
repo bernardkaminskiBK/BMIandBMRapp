@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/welcomeFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.example.bmiandbmrapp.ui.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_infoFragment"
+            app:destination="@id/infoFragment"
+            app:enterAnim="@anim/enter_left_to_right"
+            app:exitAnim="@anim/enter_right_to_left"
+            app:popEnterAnim="@anim/back_right_to_left"
+            app:popExitAnim="@anim/back_left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="com.example.bmiandbmrapp.ui.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <action
+            android:id="@+id/action_infoFragment_to_resultsFragment"
+            app:destination="@id/resultsFragment"
+            app:enterAnim="@anim/enter_left_to_right"
+            app:exitAnim="@anim/enter_right_to_left"
+            app:popEnterAnim="@anim/back_right_to_left"
+            app:popExitAnim="@anim/back_left_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultsFragment"
+        android:name="com.example.bmiandbmrapp.ui.ResultsFragment"
+        android:label="fragment_results"
+        tools:layout="@layout/fragment_results" >
+        <argument
+            android:name="age"
+            app:argType="integer" />
+        <argument
+            android:name="weight"
+            app:argType="integer" />
+        <argument
+            android:name="height"
+            app:argType="integer" />
+        <argument
+            android:name="gender"
+            app:argType="string" />
+    </fragment>
+</navigation>

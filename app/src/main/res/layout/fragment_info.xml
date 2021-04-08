@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/infoFrameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.InfoFragment">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="395dp"
+            android:layout_height="792dp"
+            android:contentDescription="@string/background_desc"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_bmiandbmrbackground"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/headLineTextView"
+            style="@style/headline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:text="@string/welcome_headline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnCalculate"
+            style="@style/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="132dp"
+            android:text="@string/btnTextCalculate"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRadioGenderGroup"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="3dp" />
+
+        <SeekBar
+            android:id="@+id/heightSeekBar"
+            android:layout_width="185dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="25dp"
+            android:max="250"
+            android:paddingStart="9dip"
+            android:paddingEnd="9dip"
+            android:progress="185"
+            android:progressTint="#D5FFFFFF"
+            android:thumbTint="@color/white"
+            app:layout_constraintEnd_toStartOf="@+id/heightSeekBarTextView"
+            app:layout_constraintStart_toEndOf="@+id/heightTextView"
+            app:layout_constraintTop_toBottomOf="@+id/ageEditTextNumber" />
+
+        <TextView
+            android:id="@+id/heightSeekBarTextView"
+            style="@style/text"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="180"
+            android:textSize="28sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/heightTextView"
+            app:layout_constraintEnd_toStartOf="@+id/imgBtnHeightPlusOne" />
+
+        <SeekBar
+            android:id="@+id/weightSeekBar"
+            android:layout_width="185dp"
+            android:layout_height="26dp"
+            android:layout_marginTop="35dp"
+            android:max="250"
+            android:outlineAmbientShadowColor="@color/white"
+            android:paddingStart="9dip"
+            android:paddingEnd="9dip"
+            android:progress="75"
+            android:progressTint="#D5FFFFFF"
+            android:thumbTint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintEnd_toStartOf="@+id/weightSeekBarTextView"
+            app:layout_constraintStart_toEndOf="@+id/weightTextView"
+            app:layout_constraintTop_toBottomOf="@+id/heightSeekBar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/weightTextView"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/text_view_weight"
+            app:layout_constraintBottom_toBottomOf="@+id/weightSeekBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/weightSeekBar"
+            tools:text="@string/text_view_weight" />
+
+        <TextView
+            android:id="@+id/weightSeekBarTextView"
+            style="@style/text"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="50"
+            android:textSize="28sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/weightTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgBtnWeightPlusOne" />
+
+        <EditText
+            android:id="@+id/ageEditTextNumber"
+            style="@style/inputAgeStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="155dp"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.176"
+            app:layout_constraintStart_toEndOf="@+id/verticalBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/headLineTextView" />
+
+        <RadioGroup
+            android:id="@+id/btnRadioGenderGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="110dp"
+            android:layout_marginBottom="24dp"
+            android:checkedButton="@id/radioButtonMan"
+            app:layout_constraintBottom_toTopOf="@+id/btnCalculate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toEndOf="@+id/verticalBarrier"
+            app:layout_constraintTop_toBottomOf="@+id/weightSeekBar">
+
+            <RadioButton
+                android:id="@+id/radioButtonMan"
+                style="@style/radio_button_male_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Man_text_radio_btn" />
+
+            <RadioButton
+                android:id="@+id/radioButtonWoman"
+                style="@style/radio_button_female_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Woman_text_radio_btn" />
+        </RadioGroup>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/verticalBarrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="end"
+            app:constraint_referenced_ids="ageTextView,weightTextView,heightTextView"
+            tools:layout_editor_absoluteX="111dp"
+            tools:layout_editor_absoluteY="17dp" />
+
+        <TextView
+            android:id="@+id/ageTextView"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:text="@string/text_view_age"
+            app:layout_constraintBottom_toBottomOf="@+id/ageEditTextNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ageEditTextNumber"
+            tools:text="@string/text_view_age" />
+
+        <TextView
+            android:id="@+id/heightTextView"
+            style="@style/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/text_view_height"
+            app:layout_constraintBottom_toBottomOf="@+id/heightSeekBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/heightSeekBar"
+            tools:text="@string/text_view_height" />
+
+        <ImageButton
+            android:id="@+id/imgBtnHeightPlusOne"
+            android:layout_width="24dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#08FFFFFF"
+            android:tint="#D5FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/heightTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/heightTextView"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/baseline_add_circle_outline_24" />
+
+        <ImageButton
+            android:id="@+id/imgBtnWeightPlusOne"
+            android:layout_width="24dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#08FFFFFF"
+            android:tint="#D5FFFFFF"
+            app:layout_constraintBottom_toBottomOf="@+id/weightTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/weightTextView"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/baseline_add_circle_outline_24" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
