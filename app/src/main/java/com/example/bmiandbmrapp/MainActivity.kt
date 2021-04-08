@@ -5,6 +5,7 @@ import android.animation.AnimatorListenerAdapter
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AccelerateInterpolator
@@ -21,6 +22,40 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        Log.i("MainActivity", "Pustam onCreate()")
+
+        val exampleLifeCycleCalc = ExampleLifeCycleCalc(this.lifecycle)
+
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Log.i("MainActivity", "Pustam onStart()")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.i("MainActivity", "Pustam onResume()")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.i("MainActivity", "Pustam onPause()")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.i("MainActivity", "Pustam onStop()")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.i("MainActivity", "Pustam onDestroy()")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.i("MainActivity", "Pustam onRestart()")
     }
 
 }
